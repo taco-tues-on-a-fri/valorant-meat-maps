@@ -9,7 +9,7 @@
         content="Valorant Heat Maps"
       />
       <link rel="stylesheet" href="styles.css">
-      <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap" rel="stylesheet">
       <title>Meat Maps</title>
   </head>
   <body>
@@ -17,6 +17,28 @@
       <div class="header-container">
         <img class="header-logo" src="logo-500.svg" alt="dots">
         <h1 class="header-title">VALORANT MEAT MAPS</h1>
+      </div>
+      <div class="header-subtext-container">
+        <h2 class="header-subtext">HEAT MAPS FOR ALL YOUR POOR DECISIONS</h2>
+      </div>
+      <div class="form-container">
+        <form class="user-search">
+          <input id="input-1" type="text" placeholder="VengefulSand" required autofocus />
+          <label for="input-1">
+            <span class="label-text">Riot ID (w/o number)</span>
+            <span class="nav-dot"></span>
+            <div class="search-button-trigger">Lookup Riot ID</div>
+          </label>
+          <input id="input-2" type="text" placeholder="#0561" required />
+          <label for="input-2">
+            <span class="label-text">Tagline (number) </span>
+            <span class="nav-dot"></span>
+          </label>
+          <button class="search-button" type="submit">Submit</button>
+          <p class="tip">Press Tab</p>
+          <div class="search-button">Look-up Riot ID</div>
+        </form>
+
       </div>
     </div>
 
