@@ -86,7 +86,6 @@ form {
 .header-title {
   color: var(--terracotta-light-1);
   display: inline-block;
-  font-family: Oswald;
   font-size: calc(100% + 3.72vw);
   font-weight: 200;
   line-height: calc(100% + 1.1vw);
@@ -99,9 +98,12 @@ form {
   width: calc(100% - 92.72vw);
 }
 
+.header-subtext-container {
+  margin-bottom: 5rem;
+}
+
 .header-subtext {
   color: var(--violet-light-03);
-  font-family: Oswald;
   font-size: calc(100% + 2.72vw);
   font-weight: 300;
   line-height: calc(100% + 1.1vw);
@@ -113,21 +115,16 @@ form {
   position: relative;
   width: 60%;
   height: 25vh;
-  background-color: var(--violet-light-03);
 }
-/* < ------------------------------ > */
 
 input,
 button {
-  /* backface-visibility: hidden; */
   position: absolute;
   top: 50%;
   left: 50%;
-  /* transform: translate(-50%, -300%); */
   transform: translate(-50%, -50%);
-  /* transform: translate3d(0, 0, 0); */
   display: block;
-  width: 50vw;
+  width: var(--form-width);
   opacity: 0;
   pointer-events: none;
   transition: all 0.5s cubic-bezier(0.4, 0.25, 0.8, 0.3);
@@ -154,9 +151,7 @@ button,
   padding: 0.25em 0;
   border: 0;
   outline: 0;
-  /* background: var(--terracotta-light-1); */
   background: var(--terracotta);
-  /* color: var(--violet-light-01); */
   color: var(--violet);
   font-size: calc(100% + 2vw);
   font-weight: 400;
@@ -171,7 +166,6 @@ button,
   position: absolute;
   top: 50%;
   left: 50%;
-  /* transform: translate(-50%, -100%); */
   transform: translate(-50%, -50%);
   width: var(--form-width);
   padding: 0.25rem 0;
@@ -222,7 +216,6 @@ button,
 }
 
 .nav-dot {
-  /* background-color: lightslategray; */
   cursor: pointer;
   position: absolute;
   padding: 0.625rem 2.25rem 0.625rem 0.625rem;
@@ -233,8 +226,6 @@ button,
   content: "";
   display: inline-block;
   border-radius: 50%;
-  /* width: 1rem; */
-  /* height: 1rem; */
   width: 2rem;
   height: 2rem;
   margin-right: 0.625rem;
@@ -290,41 +281,8 @@ input:focus + label .nav-dot:before {
 }
 
 label[for="input-1"] .nav-dot {
-  margin-top: -125px;
+  margin-top: -75px;
 }
 label[for="input-2"] .nav-dot {
-  margin-top: -100px;
+  margin-top: -50px;
 }
-
-/* .nav-dot {
-  cursor: pointer;
-  position: fixed;
-  padding: .625rem 1.25rem .625rem .625rem;  
-  top: 52%;
-  right: 1.25rem;
-  &:before {
-    content: '';  
-    display: inline-block;  
-    border-radius: 50%;
-    width: .375rem;
-    height: .375rem;
-    margin-right: .625rem;  
-    position: fixed;
-    background-color: lighten($background, 3%);
-    border: 0;
-    transition: all 0.25s;
-  }
-  &:hover:before {
-    width: .625rem;
-    height: .625rem;
-    margin-top: -.125rem;
-    margin-left: -.125rem;
-    background-color: darken(var(--primary), 5%);
-  }
-} */
-
-/* @for $i from 1 through 5 {
-  label[for="input-#{$i}"] .nav-dot {
-      margin-top: -150px + (25 * $i);
-  }
-} */
