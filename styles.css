@@ -7,7 +7,7 @@
 html,
 body {
   background-color: var(--violet-light-01);
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-weight: 200;
   font-size: 62.5%;
   line-height: 0;
@@ -59,6 +59,18 @@ form {
   overflow: hidden;
 }
 
+:root {
+  --terracotta-light-1: #f9987b;
+  --terracotta: #dc7458;
+  --terracotta-dark-1: #c6593e;
+  --terracotta-dark-2: #a9422c;
+  --violet-light-03: #581c77;
+  --violet-light-02: #471362;
+  --violet-light-01: #370a4e;
+  --violet: #260139;
+  --form-width: 50vw;
+}
+
 .root {
   font-family: "Oswald";
   height: 100vh;
@@ -97,19 +109,23 @@ form {
 }
 
 .form-container {
+  margin: auto;
   position: relative;
-  width: 100%;
+  width: 60%;
   height: 25vh;
-  background-color: lightslategray;
+  background-color: var(--violet-light-03);
 }
 /* < ------------------------------ > */
 
 input,
 button {
+  /* backface-visibility: hidden; */
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -300%);
+  /* transform: translate(-50%, -300%); */
+  transform: translate(-50%, -50%);
+  /* transform: translate3d(0, 0, 0); */
   display: block;
   width: 50vw;
   opacity: 0;
@@ -119,7 +135,7 @@ button {
 input {
   padding: 0.25rem 0;
   border: 0;
-  border-bottom: 2px solid var(--terracotta-dark-1);
+  border-bottom: 2px solid var(--violet-light-03);
   outline: 0;
   background: transparent;
   color: #fff;
@@ -133,30 +149,17 @@ input::selection {
   background: rgba(var(--terracotta-light-1), 0.25);
 }
 
-:root {
-  --background: #111e25;
-  --dark: #111;
-  --primary: #bb1515;
-  --terracotta-light-1: #f9987b;
-  --terracotta: #dc7458;
-  --terracotta-dark-1: #c6593e;
-  --terracotta-dark-2: #a9422c;
-  --violet-light-03: #581c77;
-  --violet-light-02: #471362;
-  --violet-light-01: #370a4e;
-  --violet: #260139;
-  --form-width: 50vw;
-}
-
 button,
 .search-button {
   padding: 0.25em 0;
   border: 0;
   outline: 0;
-  background: var(--terracotta-light-1);
-  color: --violet-light-01;
+  /* background: var(--terracotta-light-1); */
+  background: var(--terracotta);
+  /* color: var(--violet-light-01); */
+  color: var(--violet);
   font-size: calc(100% + 2vw);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 3.6rem;
   letter-spacing: 0.0625rem;
   box-shadow: 0 3px 5px 1px rgba(#000, 0.25);
@@ -168,7 +171,8 @@ button,
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -100%);
+  /* transform: translate(-50%, -100%); */
+  transform: translate(-50%, -50%);
   width: var(--form-width);
   padding: 0.25rem 0;
   line-height: calc(100% + 2.5vw);
@@ -193,7 +197,7 @@ button,
   text-transform: uppercase;
   color: #fff;
   opacity: 0;
-  font-size: calc(100% + 1vw);
+  font-size: calc(100% + 1.5vw);
   line-height: calc(100% + 1.1vw);
   font-weight: 300;
   letter-spacing: 0.125rem;
@@ -206,10 +210,10 @@ button,
   top: 57%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+  width: var(--form-width);
   opacity: 0;
   color: #fff;
-  font-size: calc(100% + 0.5vw);
+  font-size: calc(100% + 1vw);
   font-weight: 300;
   letter-spacing: 0.125rem;
   text-transform: uppercase;
@@ -218,18 +222,22 @@ button,
 }
 
 .nav-dot {
+  /* background-color: lightslategray; */
   cursor: pointer;
   position: absolute;
-  padding: 0.625rem 1.25rem 0.625rem 0.625rem;
-  top: 52%;
+  padding: 0.625rem 2.25rem 0.625rem 0.625rem;
+  top: 73%;
   right: 1.25rem;
 }
 .nav-dot:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
-  width: 1rem;
-  height: 1rem;
+  /* width: 1rem; */
+  /* height: 1rem; */
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.625rem;
   margin-right: 0.625rem;
   position: absolute;
   background-color: var(--terracotta-dark-2);
@@ -237,8 +245,8 @@ button,
   transition: all 0.25s;
 }
 .nav-dot:hover:before {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   margin-top: -0.125rem;
   margin-left: -0.125rem;
   background-color: var(--terracotta-light-1);
@@ -286,15 +294,6 @@ label[for="input-1"] .nav-dot {
 }
 label[for="input-2"] .nav-dot {
   margin-top: -100px;
-}
-label[for="input-3"] .nav-dot {
-  margin-top: -75px;
-}
-label[for="input-4"] .nav-dot {
-  margin-top: -50px;
-}
-label[for="input-5"] .nav-dot {
-  margin-top: -25px;
 }
 
 /* .nav-dot {
