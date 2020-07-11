@@ -6,7 +6,7 @@
 
 html,
 body {
-  background-color: var(--violet-light-01);
+  background-color: var(--violet);
   font-family: "Oswald", sans-serif;
   font-weight: 200;
   font-size: 62.5%;
@@ -125,7 +125,6 @@ form {
 
 #match-history-container {
   width: 100%;
-  /* height: 500px; */
   height: 75vh;
 }
 
