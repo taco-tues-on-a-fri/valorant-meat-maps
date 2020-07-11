@@ -132,14 +132,14 @@ button {
   width: var(--form-width);
 }
 input {
-  background: transparent;
-  border-bottom: 2px solid var(--violet-light-03);
   border: 0;
+  border-bottom: 2px solid var(--violet-light-03);
+  outline: 0;
+  background: transparent;
   color: #fff;
   font-size: calc(100% + 2vw);
   letter-spacing: 0.125rem;
   line-height: 4rem;
-  outline: 0;
   padding: 0.25rem 0;
   transition: all 0.5s cubic-bezier(0.4, 0.25, 0.8, 0.3);
 }
@@ -150,15 +150,15 @@ input::selection {
 
 button,
 .search-button {
-  background: var(--terracotta);
   border: 0;
+  outline: 0;
+  background: var(--terracotta);
   box-shadow: 0 3px 5px 1px rgba(#000, 0.25);
   color: var(--violet);
   font-size: calc(100% + 2vw);
   font-weight: 400;
   letter-spacing: 0.0625rem;
   line-height: 3.6rem;
-  outline: 0;
   padding: 0.25em 0;
   text-shadow: 0 -2px 0 rgba(#000, 0.25), 0 1px 0 rgba(#fff, 0.2);
   text-transform: uppercase;
