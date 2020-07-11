@@ -200,7 +200,7 @@ input:focus + label .nav-dot:before {
   width: 70%;
   opacity: 0;
   color: #fff;
-  font-size: 0.875rem;
+  font-size: calc(100% + 0.5vw);
   font-weight: 300;
   letter-spacing: 0.125rem;
   text-transform: uppercase;
@@ -238,7 +238,6 @@ input:focus + label .nav-dot:before {
   text-transform: uppercase;
   color: #fff;
   opacity: 0;
-  /* font-size: 1.125rem; */
   font-size: calc(100% + 1vw);
   line-height: calc(100% + 1.1vw);
   font-weight: 300;
