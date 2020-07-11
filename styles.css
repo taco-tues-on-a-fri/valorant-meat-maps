@@ -72,3 +72,12 @@ div {
   padding-right: 1rem;
   width: calc(100% - 92.72vw);
 }
+
+.heat-map-container {
+  height: 500px;
+  width: 500px;
+}
+.heat-map-image {
+  height: 500px;
+  width: 500px;
+}
