@@ -22,23 +22,36 @@
         <h2 class="header-subtext">HEAT MAPS FOR ALL YOUR POOR DECISIONS</h2>
       </div>
       <div class="form-container">
-        <form class="user-search">
-          <input id="input-1" type="text" placeholder="VengefulSand" required autofocus />
+        <form id="user-form"class="user-search">
+          <input 
+            id="input-1" 
+            type="text" 
+            placeholder="VengefulSand"
+            onkeypress="pressEnter('input-2')" 
+            required 
+            autofocus 
+          />
           <label for="input-1">
             <span class="label-text">Riot ID (w/o number)</span>
             <span class="nav-dot"></span>
             <div class="search-button-trigger">Lookup Riot ID</div>
           </label>
-          <input id="input-2" type="text" placeholder="#0561" required />
+          <input 
+            id="input-2" 
+            type="text" 
+            placeholder="#0561" 
+            onkeypress="pressEnter('form-submit-button')" 
+            required
+          />
           <label for="input-2">
             <span class="label-text">Tagline (number) </span>
             <span class="nav-dot"></span>
           </label>
-          <button class="search-button" type="submit">Submit</button>
           <p class="tip">Press Tab</p>
+          <button id="form-submit-button" class="search-button" type="submit">Submit</button>
           <div class="search-button">Look-up Riot ID</div>
         </form>
-
+        <div id="match-history-container" />
       </div>
     </div>
 
