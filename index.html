@@ -2,15 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-      <!-- <link rel="icon" href="./src/static/favicon.ico" /> -->
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta
-        name="description"
-        content="Valorant Heat Maps"
-      />
-      <link rel="stylesheet" href="styles.css">
-      <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-      <title>Meat Maps</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+    <link rel="manifest" href="static/site.webmanifest">
+    <link rel="mask-icon" href="static/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="static/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="static/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Valorant Heat Maps"
+    />
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <title>Meat Maps</title>
   </head>
   <body>
     <div id="root">
@@ -19,37 +27,34 @@
         <h1 class="header-title">VALORANT MEAT MAPS</h1>
       </div>
       <div class="header-subtext-container">
-        <h2 class="header-subtext">HEAT MAPS FOR ALL YOUR POOR DECISIONS</h2>
+        <h2 class="header-subtext">HEAT MAPS TO AID YOUR POOR DECISIONS</h2>
       </div>
-      <div class="form-container">
-        <form id="user-form"class="user-search">
-          <input 
-            id="input-1" 
-            type="text" 
-            placeholder="VengefulSand"
-            onkeypress="pressEnter('input-2')"
-            autofocus 
-          />
-          <label for="input-1">
-            <span class="label-text">Riot ID (w/o number)</span>
-            <span class="nav-dot"></span>
-            <div class="search-button-trigger">Lookup Riot ID</div>
-          </label>
-          <input 
-            id="input-2" 
-            type="text" 
-            placeholder="#0561" 
-            onkeypress="pressEnter('form-submit-button')" 
-          />
-          <label for="input-2">
-            <span class="label-text">Tagline (number) </span>
-            <span class="nav-dot"></span>
-          </label>
-          <p class="tip">Press Tab</p>
-          <button id="form-submit-button" class="search-button" type="submit">Submit</button>
-          <div class="search-button">Look-up Riot ID</div>
-        </form>
-        <div id="match-history-container" />
+      <nav role="navigation" class="primary-navigation">
+        <ul>
+          <li><a href="#match-history-container" onclick="handleHeatMapImage()">Match</a></li>
+          <li><a href="#match-history-container" onclick="handleHeatMapImage()">Half</a></li>
+          <li><a href="#match-history-container" onclick="handleHeatMapImage()">Round</a></li>
+          <li><a >Rank &dtrif;</a>
+            <ul class="dropdown">
+              <li><a href="#match-history-container" onclick="handleHeatMapImage()">plant</a></li>
+              <li><a href="#match-history-container" onclick="handleHeatMapImage()">defuse</a></li>
+              <li><a href="#match-history-container" onclick="handleHeatMapImage()">Ultimate</a></li>
+              <li><a href="#match-history-container" onclick="handleHeatMapImage()">Weapon</a></li>
+            </ul>
+          </li>
+          <li><a >Character &dtrif;</a>
+            <ul class="dropdown">
+              <li><a href="#match-history-container" onclick="handleHeatMapImage()">plant</a></li>
+              <li><a href="#match-history-container" onclick="handleHeatMapImage()">defuse</a></li>
+              <li><a href="#match-history-container" onclick="handleHeatMapImage()">Ability 1</a></li>
+              <li><a href="#match-history-container" onclick="handleHeatMapImage()">Ability 2</a></li>
+              <li><a href="#match-history-container" onclick="handleHeatMapImage()">Ultimate</a></li>
+              <li><a href="#match-history-container" onclick="handleHeatMapImage()">Weapon</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div id="match-history-container" />
       </div>
     </div>
 
