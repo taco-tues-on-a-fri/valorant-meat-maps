@@ -1,12 +1,6 @@
 
-const pressEnter = (inputId) => {
-  // Key Code for ENTER = 13
-  if ((event.keyCode == 13)) {
-    document.getElementById(`${inputId}`).focus({preventScroll:false})
-  }
-}
 
-let form = document.getElementById("user-form")
+
 
 const mapSwitch = (number) => {
   switch(number) {
@@ -57,11 +51,22 @@ const handleHeatMapImage = () => {
   }
 }
 
-const handleForm = (event) => { 
-  console.log('handleForm()=> executed: event===', event)
+//|------------------------------------------------------------------------
+//| logic for now-unused form
+//|------------------------------------------------------------------------
+// const pressEnter = (inputId) => {
+//   // Key Code for ENTER = 13
+//   if ((event.keyCode == 13)) {
+//     document.getElementById(`${inputId}`).focus({preventScroll:false})
+//   }
+// }
+// let form = document.getElementById("user-form")
+// const handleForm = (event) => { 
+//   console.log('handleForm()=> executed: event===', event)
 
-  event.preventDefault() 
-  handleHeatMapImage()
-} 
+//   event.preventDefault() 
+//   handleHeatMapImage()
+// } 
 
-form.addEventListener('submit', handleForm)
+// form.addEventListener('submit', handleForm)
+//|------------------------------------------------------------------------
